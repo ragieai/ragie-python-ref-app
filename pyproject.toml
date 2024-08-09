@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ragie-python-ref-app"
+version = "0.1.0"
+description = ""
+authors = ["Matt Kauffman <matt@ragie.ai>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+test = "ragie_python_ref_app.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ragie = "^0.0.3"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
