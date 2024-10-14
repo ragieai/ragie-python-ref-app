@@ -10,6 +10,8 @@ ragie = Ragie(
     auth=os.getenv('RAGIE_API_KEY'),
 )
 
+DOCUMENT_PARTITION = "test_partition"
+
 def main():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(current_dir, 'examples', 'sample_podcast.txt')
@@ -20,7 +22,9 @@ def main():
         },
         "metadata": {
             "scope": "tutorial"
-        }
+        },
+        # Partition is optional
+        "partition": DOCUMENT_PARTITION
     })
 
     print(create_res)
@@ -38,7 +42,9 @@ def main():
         "filter_": {
             "scope": "tutorial"
         },
-        "rerank": True
+        "rerank": True,
+        # Partition is optional
+        "partition": DOCUMENT_PARTITION
     })
 
     print(retrieval_res)

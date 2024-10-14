@@ -10,7 +10,7 @@ test = "ragie_python_ref_app.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-ragie = "^0.0.3"
+ragie = "^1.1.0"
 python-dotenv = "^1.0.1"
 
 
