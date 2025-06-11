@@ -23,6 +23,7 @@ def main():
         "metadata": {
             "scope": "tutorial"
         },
+        "mode": "fast",
         # Partition is optional
         "partition": DOCUMENT_PARTITION
     })
@@ -30,7 +31,7 @@ def main():
     print(create_res)
 
     while True:
-        res = ragie.documents.get(document_id=create_res.id)
+        res = ragie.documents.get(document_id=create_res.id, partition=DOCUMENT_PARTITION)
         print(res.status)
         if res.status == "ready":
             break
